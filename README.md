@@ -1,0 +1,2 @@
+# dfr
+duplicacy-finder-remover

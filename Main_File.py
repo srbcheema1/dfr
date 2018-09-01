@@ -17,6 +17,8 @@ textfilepath = []
 imagefilename = []
 imagefilepath = []
 
+
+
 textdic = {}
 imagedic = {}
 
@@ -47,7 +49,8 @@ def find_directory(dir_path):
                     imagedic[key] = [path]
 
 
-find_directory("/home/choudhary/Music")
+cwd = os.getcwd()
+find_directory(os.path.join(cwd,"test_dir"))
 
 print("Text File Dictionary")
 for i in textdic:

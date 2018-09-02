@@ -1,0 +1,28 @@
+[
+    {
+        "d41d8cd98f00b204e9800998ecf8427e": [
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/D/8.txt",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/D/4.txt",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/D/6.txt",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/D/7.txt",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/D/1.txt",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/D/9.txt",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/D/5.txt",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/D/2.txt",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/D/3.txt"
+        ]
+    },
+    {
+        "d41d8cd98f00b204e9800998ecf8427e": [
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/A/1/2.png",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/A/1/6.png",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/A/1/8.png",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/A/1/4.png",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/A/1/5.png",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/A/1/9.png",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/A/1/1.png",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/A/1/7.png",
+            "/home/choudhary/PycharmProjects/duplicate_finder/venv/bin/scripts/test_dir/A/1/3.png"
+        ]
+    }
+]

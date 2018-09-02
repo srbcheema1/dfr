@@ -1,5 +1,6 @@
 import os
 import hashlib
+import json
 
 def findCheckSumMD5(fname):
     BLOCKSIZE = 65536
@@ -51,6 +52,9 @@ def find_directory(dir_path):
 
 cwd = os.getcwd()
 find_directory(os.path.join(cwd,"test_dir"))
+
+with open('cache.json', 'w') as file:
+    json.dump([textdic,imagedic],file, sort_keys=True, indent=4)
 
 print("Text File Dictionary")
 for i in textdic:

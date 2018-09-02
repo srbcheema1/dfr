@@ -18,10 +18,11 @@ textfilepath = []
 imagefilename = []
 imagefilepath = []
 
-
-
 textdic = {}
 imagedic = {}
+combined_dic = {}
+combined_dic['Text File Dictionary'] = textdic
+combined_dic['Image File Dictionary'] = imagedic
 
 def find_directory(dir_path):
     for fname in os.listdir(dir_path):
@@ -53,8 +54,9 @@ def find_directory(dir_path):
 cwd = os.getcwd()
 find_directory(os.path.join(cwd,"test_dir"))
 
+
 with open('cache.json', 'w') as file:
-    json.dump([textdic,imagedic],file, sort_keys=True, indent=4)
+    json.dump(combined_dic,file, sort_keys=True, indent=4)
 
 print("Text File Dictionary")
 for i in textdic:

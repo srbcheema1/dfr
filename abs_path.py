@@ -2,6 +2,7 @@
 import os
 from sys import argv
 
+
 def reactified(path):
     direc = []
     nodes = path.split("/")

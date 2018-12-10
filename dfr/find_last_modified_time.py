@@ -1,23 +1,23 @@
 import os
 import json
 import hashlib
-from abs_path import abs_path
-from constant import last_modified_json_path
-from constant import time_template
-from constant import findCheckSumMD5
-from constant import cache_file_path
+from .abs_path import abs_path
+from .constant import last_modified_json_path
+from .constant import last_modified_template
+from .constant import findCheckSumMD5
+from .constant import cache_file_path
 debug = False
 last_modified_dic={}
 
 def verify_last_modified():
     if not os.path.isfile(last_modified_json_path):
         with open(last_modified_json_path, 'w') as _file:
-            json.dump(time_template, _file, sort_keys=True, indent=4)
+            json.dump(last_modified_template, _file, sort_keys=True, indent=4)
 
 def verify_file_dic():
     if not os.path.isfile(cache_file_path):
         with open(cache_file_path, 'w') as _file:
-            json.dump(time_template, _file, sort_keys=True, indent=4)
+            json.dump(last_modified_template, _file, sort_keys=True, indent=4)
 
 def write_last_modified( current_dic ):
     verify_last_modified()
@@ -41,7 +41,7 @@ def get_file_dic():
     jfile = open(cache_file_path)
     data = json.load(jfile)
     return data
-    
+
 
 # todo keep name genric for files and folder ... say is_modified
 def should_check_files_or_folder(path, last_modified_dic, filedic):
@@ -71,5 +71,5 @@ def delete_duplicate_enrty_in_cache_file(hash, path, filedic):
             filedic[hash].remove(path)
 
 def write_filedic_in_cache_json(filedic):
-    with open('cache.json', 'w') as file:
+    with open(cache_file_path, 'w') as file:
         json.dump(filedic,file, sort_keys=True, indent=4)

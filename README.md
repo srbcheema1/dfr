@@ -21,4 +21,5 @@ duplicacy-finder-remover
 ### Development by
 
 Developer / Author: [Srb Cheema](https://github.com/srbcheema1/)
+
 Developer / Author: [Rakesh Kumar](https://github.com/spider34/)

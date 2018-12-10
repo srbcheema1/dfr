@@ -1,10 +1,10 @@
 import os
 import json
 import sys
-from find_last_modified_time import get_file_dic
-from find_last_modified_time import verify_file_dic
-from abs_path import abs_path
-from constant import findCheckSumMD5
+from .find_last_modified_time import get_file_dic
+from .find_last_modified_time import verify_file_dic
+from .abs_path import abs_path
+from .constant import findCheckSumMD5
 debug = False
 
 

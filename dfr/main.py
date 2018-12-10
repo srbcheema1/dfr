@@ -1,18 +1,18 @@
 import os
+import sys
 import hashlib
 import json
-from find_last_modified_time import verify_last_modified
-from find_last_modified_time import should_check_files_or_folder
-from find_last_modified_time import write_last_modified
-from find_last_modified_time import write_filedic_in_cache_json
-from find_last_modified_time import get_last_modified_dic, get_file_dic
-from constant import last_modified_json_path
-from constant import findCheckSumMD5
-from children_file import write_children_json_file
-from children_file import check_all_children_exists
-from children_file import get_children_dic
-from children_file import get_children_dic
-from abs_path import abs_path
+from .abs_path import abs_path
+from .children_file import write_children_json_file
+from .children_file import check_all_children_exists
+from .children_file import get_children_dic
+from .children_file import get_children_dic
+from .constant import findCheckSumMD5
+from .find_last_modified_time import verify_last_modified
+from .find_last_modified_time import should_check_files_or_folder
+from .find_last_modified_time import write_last_modified
+from .find_last_modified_time import write_filedic_in_cache_json
+from .find_last_modified_time import get_last_modified_dic, get_file_dic
 debug = False
 
 def write_in_children_dic(dir_path, path, children_dic):
@@ -59,6 +59,7 @@ def make_dictionary(dir_path):
     # writing updated dictionaries
     write_children_json_file(children_dic)
     write_last_modified(last_modified_dic)
+    print(filedic)
     write_filedic_in_cache_json(filedic)
 
 
@@ -70,8 +71,5 @@ def main():
     print("Done Caching !")
 
 
-
-
 if __name__ == "__main__":
     main()
-

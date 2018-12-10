@@ -1,7 +1,7 @@
 import json
 import os
-from constant import children_json_path
-from constant import children_template
+from .constant import children_json_path
+from .constant import children_template
 
 def verify_children_dic():
     if not os.path.isfile(children_json_path):

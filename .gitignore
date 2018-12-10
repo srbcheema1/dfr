@@ -1,1 +1,16 @@
-*.json
+# python compiled files
+*.pyc
+
+# dist and builds
+dist/
+build/
+
+# eggs
+*.egg-info
+*.egg
+
+# virtual environments
+venv/
+env/
+venv3/
+

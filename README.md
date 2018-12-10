@@ -9,6 +9,36 @@ duplicacy-finder-remover
 **DFR** is `Duplicacy Finder Remover`, A command-line tool find locate remove and manage duplicacies in files.
 
 
+### Installation
+
+#### Install using pip (Recommended)
+
+- Use pip to install, user `--user` flag
+```
+python3 -m pip install --user dfr
+```
+
+#### Build from Source
+
+- Clone the repository and checkout to stable commit
+```
+git clone https://github.com/srbcheema1/dfr
+cd dfr
+git checkout <latest_version say: v0.0.x>
+```
+
+- install requirements
+```
+python3 -m pip install --user -r requirements.txt
+```
+- Install Dfr
+```
+python3 setup.py install --user
+```
+- Building Source Distribution
+```
+python3 setup.py sdist
+```
 
 
 ### Contact / Social Media

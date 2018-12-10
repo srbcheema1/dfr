@@ -1,6 +1,8 @@
 from .abs_path import abs_path
 import hashlib
 
+debug = False
+
 
 last_modified_json_path = abs_path("~/.config/dfr/last_modified.json")
 cache_file_path = abs_path("~/.config/dfr/cache.json")

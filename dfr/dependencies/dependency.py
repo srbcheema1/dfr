@@ -52,9 +52,9 @@ def is_installed(soft):
     return False
 
 
-def install_arg_complete():
+def install_arg_complete(app_name):
     if is_installed('register-python-argcomplete'):
-        line = 'eval "$(register-python-argcomplete medipack)"'
+        line = 'eval "$(register-python-argcomplete '+app_name+')"'
         filename = os.environ['HOME'] + '/.bashrc'
         line_adder(filename,line)
 
@@ -97,4 +97,4 @@ if __name__ == '__main__':
         },
     }
     install_dependencies(dependency_map,verbose=True)
-    install_arg_complete()
+    install_arg_complete('demo_app')

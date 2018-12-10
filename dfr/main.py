@@ -2,18 +2,21 @@ import os
 import sys
 import hashlib
 import json
+from .args import Args
 from .abs_path import abs_path
 from .children_file import write_children_json_file
 from .children_file import check_all_children_exists
 from .children_file import get_children_dic
 from .children_file import get_children_dic
 from .constant import findCheckSumMD5
+from .constant import debug
 from .find_last_modified_time import verify_last_modified
 from .find_last_modified_time import should_check_files_or_folder
 from .find_last_modified_time import write_last_modified
 from .find_last_modified_time import write_filedic_in_cache_json
 from .find_last_modified_time import get_last_modified_dic, get_file_dic
-debug = False
+from .Colour import Colour
+from .remover import finder
 
 def write_in_children_dic(dir_path, path, children_dic):
     if children_dic.get(dir_path) is None:
@@ -59,16 +62,31 @@ def make_dictionary(dir_path):
     # writing updated dictionaries
     write_children_json_file(children_dic)
     write_last_modified(last_modified_dic)
-    print(filedic)
     write_filedic_in_cache_json(filedic)
 
 
 def main():
-    print("Starting...")
     cwd = os.getcwd()
-    dir_path = os.path.join(cwd, "test_dir")
-    make_dictionary(dir_path)
-    print("Done Caching !")
+    parser = Args.get_parser()
+
+    if(parser.action == 'cache'):
+        if(not parser.loc):
+            location = input('Enter a location : ')
+        else:
+            location = parser.loc
+        Colour.print("Caching...",Colour.GREEN)
+        path = os.path.join(cwd, location)
+        make_dictionary(path)
+        Colour.print("Done Caching !",Colour.GREEN)
+
+    if(parser.action == 'find'):
+        if(not parser.inp):
+            location = input('Enter a location : ')
+        else:
+            location = parser.inp
+        path = os.path.join(cwd, location)
+        finder(path)
+        # call finder
 
 
 if __name__ == "__main__":

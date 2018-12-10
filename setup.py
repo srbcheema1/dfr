@@ -14,7 +14,7 @@ try:
     from dfr.dependencies.dependencies import dependency_map
     from dfr.dependencies.dependency import install_arg_complete, install_dependencies
     install_dependencies(dependency_map,verbose=True)
-    install_arg_complete()
+    install_arg_complete(__mod_name__)
 except:
     __version__ = '1.0.0'
     __mod_name__ = 'dfr'

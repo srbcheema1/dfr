@@ -69,13 +69,13 @@ def should_check_files_or_folder(path, last_modified_dic, filedic):
             last_modified_dic[path] = [str(os.path.getmtime(path))]
         else:
             should_delete_entry_hash = last_modified_dic[path][1]
-            delete_duplicate_enrty_in_cache_file(should_delete_entry_hash, path, filedic)
+            _delete_duplicate_enrty_in_cache_file(should_delete_entry_hash, path, filedic)
             last_modified_dic[path] = [str(os.path.getmtime(path)), findCheckSumMD5(path)]
         return True
 
     return False
 
-def delete_duplicate_enrty_in_cache_file(hash, path, filedic):
+def _delete_duplicate_enrty_in_cache_file(hash, path, filedic):
     if hash in filedic:
         if path in  filedic[hash]:
             filedic[hash].remove(path)

@@ -16,7 +16,7 @@ from .find_last_modified_time import write_last_modified
 from .find_last_modified_time import write_filedic_in_cache_json
 from .find_last_modified_time import get_last_modified_dic, get_file_dic
 from .Colour import Colour
-from .remover import finder
+from .remover import process_path
 
 def write_in_children_dic(dir_path, path, children_dic):
     if children_dic.get(dir_path) is None:
@@ -85,8 +85,7 @@ def main():
         else:
             location = parser.inp
         path = os.path.join(cwd, location)
-        finder(path)
-        # call finder
+        process_path(path)
 
 
 if __name__ == "__main__":

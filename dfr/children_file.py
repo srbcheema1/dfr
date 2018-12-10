@@ -55,7 +55,7 @@ def _remove_recursively(dir_path, filedic, last_modified_dic, children_dic):
                 safe_remove(children_dic[dir_path],child)
             if hash_file in filedic.keys():
                 safe_remove(filedic[hash_file],child)
-    
+
 def check_all_children_exists(dir_path, filedic, last_modified_dic, children_dic):
     if not dir_path in children_dic:
         return
@@ -78,5 +78,5 @@ def check_all_children_exists(dir_path, filedic, last_modified_dic, children_dic
                     safe_remove(children_dic[dir_path], child)
                 if hash_file in filedic.keys():
                     safe_remove(filedic[hash_file], child)
-                
-            
+
+
